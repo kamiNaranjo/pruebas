@@ -17,5 +17,3 @@ def call(url) {
 		}
 	}
 }
-
-return this
