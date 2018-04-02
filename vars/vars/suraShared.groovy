@@ -1,4 +1,4 @@
-package library.build
+package vars
 
 def call(body) {
 	def config = [:]
