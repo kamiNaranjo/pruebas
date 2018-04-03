@@ -18,3 +18,7 @@ def call(url) {
         }
     } 
 } 
+
+def holaMundo{
+    echo "hola mundo"
+}
