@@ -14,7 +14,6 @@ def call(url) {
                 sh 'gradle clean build'
             }
         }
-        }
       }
     }
 } 
