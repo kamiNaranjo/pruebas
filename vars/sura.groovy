@@ -4,11 +4,17 @@ def call(url) {
       agent any
       stages {
         stage('Build') {
-          steps {
-            cleanWs()
-            git credentialsId: '0df8e168-c5ab-452f-b993-29496cfbcd29', url: "${url}"
-            sh 'gradle clean build'
-          }
+          stage('GIT') {
+            steps {
+                git credentialsId: '0df8e168-c5ab-452f-b993-29496cfbcd29', url: "${url}"
+
+            }
+        }
+        stage('Gradle') {
+            steps {
+                sh 'gradle clean build'
+            }
+        }
         }
       }
     }
