@@ -1,25 +1,14 @@
-def call(int buildNumber) {
-  if (buildNumber % 2 == 0) {
+def call(url) {
     pipeline {
       agent any
       stages {
-        stage('Even Stage') {
+        stage('Build') {
           steps {
-            echo "The build number is even"
+            cleanWs()
+            git credentialsId: '0df8e168-c5ab-452f-b993-29496cfbcd29', url: '${url}'
           }
         }
       }
     }
-  } else {
-    pipeline {
-      agent any
-      stages {
-        stage('Odd Stage') {
-          steps {
-            echo "The build number is odd"
-          }
-        }
-      }
-    }
-  }
+  } 
 }
