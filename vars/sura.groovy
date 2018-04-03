@@ -1,3 +1,3 @@
-def echo() {
+def holi() {
 	echo "hola"
 }
