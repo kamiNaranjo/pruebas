@@ -5,7 +5,7 @@ def call(url) {
         stage('Build') {
           steps {
             cleanWs()
-            git credentialsId: '0df8e168-c5ab-452f-b993-29496cfbcd29', url: ${url}
+            git credentialsId: '0df8e168-c5ab-452f-b993-29496cfbcd29', url: "${url}"
           }
         }
       }
