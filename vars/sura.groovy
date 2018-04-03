@@ -17,8 +17,8 @@ def call(url) {
             }
         }
     } 
-} 
+}
 
-def holaMundo{
-    echo "hola mundo"
+def shTexto(texto) {
+	sh "${texto}"
 }
